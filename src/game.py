@@ -10,7 +10,6 @@ class Game:
         self.active_value = 0
         self.actv_player_index = -1
         self.ended = False
-        # print(f"Game started.")
 
     def __repr__(self) -> str:
         return str([p for p in self.players])
@@ -18,7 +17,7 @@ class Game:
     def results(self):
         return [p.points for p in self.players]
 
-    def step(self):  # TODO: cycle round start player
+    def step(self):
 
         # Check if new card must be drawn
         if self.actv_player_index == -1:
@@ -26,7 +25,7 @@ class Game:
             self.actv_player_index += 1
 
         # Retrieve player action by giving him gamestate
-        action = self.players[self.actv_player_index].action(self.active_value, self.players)
+        action = self.players[self.actv_player_index].action(self.active_value, [p.opponent_info() for p in self.players])
         self.player_bets[self.actv_player_index] = action
 
         # Next player in line
