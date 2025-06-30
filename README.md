@@ -20,8 +20,8 @@ class YourNamePlayer(Player):
 ### Helper methods
 Your `Player` superclass comes with helper methods:
 - `_highest_card() -> int` and `_lowest_card() -> int`
-- `highest_but_not_higher_than(value: int) -> int`: Returns `-1` if no card matches the criteria.
-- `lowest_but_not_lower_than(value: int) -> int`: Returns `-1` if no card matches the criteria.
+- `_highest_but_not_higher_than(value: int) -> int`: Returns `-1` if no card matches the criteria.
+- `_lowest_but_not_lower_than(value: int) -> int`: Returns `-1` if no card matches the criteria.
 
 
 ### Example in-built Players
