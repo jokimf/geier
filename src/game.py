@@ -1,10 +1,6 @@
 import random
 
 
-def win_draw_loss(bets: list):
-    pass
-
-
 class Game:
     def __init__(self, players) -> None:
         self.players = players
@@ -22,7 +18,7 @@ class Game:
     def results(self):
         return [p.points for p in self.players]
 
-    def step(self) -> float:  # TODO: cycle round start player
+    def step(self):  # TODO: cycle round start player
 
         # Check if new card must be drawn
         if self.actv_player_index == -1:

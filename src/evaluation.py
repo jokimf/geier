@@ -1,9 +1,9 @@
 import numpy
 
 from game import Game
-from player import RandomPlayer
+from player import RandomPlayer, StaticPlayer
 
-players = [RandomPlayer(), RandomPlayer(), RandomPlayer(), RandomPlayer()]
+players = [StaticPlayer(), RandomPlayer(), RandomPlayer(), RandomPlayer()]
 summed_player_points = numpy.zeros(len(players), dtype=int)
 
 for _ in range(10000):
