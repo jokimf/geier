@@ -58,3 +58,4 @@ Measure your performance by setting up a game against them.
 - `games: int`: Amount of games to simulate.
 - `game_class`: Two options available: `Game` for the normal what-the-heck, `VerboseGame` for console spam. Not recommended with higher game amount.
 - `players: tuple[Player]`: Spefify which players participate in the game. No player limit.
+- Returns a `numpy.array` with player scores after all `games` have been played.
